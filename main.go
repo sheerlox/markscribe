@@ -61,6 +61,7 @@ func main() {
 		/* Utils */
 		"humanize": humanized,
 		"reverse":  reverse,
+		"regexMatch": regexMatch,
 		"now":      time.Now,
 		"contains": strings.Contains,
 		"toLower":  strings.ToLower,
