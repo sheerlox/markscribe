@@ -5,6 +5,7 @@ import (
 	"reflect"
 	"time"
 
+	"github.com/dlclark/regexp2"
 	"github.com/dustin/go-humanize"
 )
 
@@ -32,4 +33,11 @@ func reverse(s interface{}) interface{} {
 	}
 
 	return s
+}
+
+// regexMatch returns true or false if the string matches
+// the given regular expression
+func regexMatch(re, s string) (bool, error) {
+	compiled := regexp2.MustCompile(re, 0)
+	return compiled.MatchString(s)
 }
