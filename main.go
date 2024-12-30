@@ -29,7 +29,7 @@ func main() {
 	flag.Parse()
 
 	if len(flag.Args()) == 0 {
-		fmt.Println("Usage: markscribe [template]")
+		fmt.Println("Usage: markscribe2 [template]")
 		os.Exit(1)
 	}
 

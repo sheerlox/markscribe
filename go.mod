@@ -1,4 +1,4 @@
-module github.com/muesli/markscribe
+module github.com/sheerlox/markscribe2
 
 go 1.14
 

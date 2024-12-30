@@ -4,7 +4,7 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - binary: markscribe
+  - binary: markscribe2
     flags:
       - -trimpath
     ldflags: -s -w -X main.Version={{ .Version }} -X main.CommitSHA={{ .Commit }}
@@ -35,27 +35,16 @@ archives:
 
 nfpms:
   - builds:
-      - markscribe
-    vendor: muesli
-    homepage: "https://fribbledom.com/"
-    maintainer: "Christian Muehlhaeuser <muesli@gmail.com>"
+      - markscribe2
+    vendor: sheerlox
+    homepage: "https://github.com/sheerlox/markscribe2"
+    maintainer: "Pierre Cavin <me@sherlox.io>"
     description: "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers"
     license: MIT
     formats:
       - deb
       - rpm
     bindir: /usr/bin
-
-brews:
-  - tap:
-      owner: muesli
-      name: homebrew-tap
-    commit_author:
-      name: "Christian Muehlhaeuser"
-      email: "muesli@gmail.com"
-    homepage: "https://fribbledom.com/"
-    description: "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers"
-    # skip_upload: true
 
 signs:
   - artifacts: checksum

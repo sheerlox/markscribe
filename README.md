@@ -1,45 +1,41 @@
-# markscribe
+# markscribe2
 
-[![Latest Release](https://img.shields.io/github/release/muesli/markscribe.svg)](https://github.com/muesli/markscribe/releases)
-[![Build Status](https://github.com/muesli/markscribe/workflows/build/badge.svg)](https://github.com/muesli/markscribe/actions)
-[![Go ReportCard](https://goreportcard.com/badge/muesli/markscribe)](https://goreportcard.com/report/muesli/markscribe)
-[![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://pkg.go.dev/github.com/muesli/markscribe)
+[![Latest Release](https://img.shields.io/github/release/sheerlox/markscribe2.svg)](https://github.com/sheerlox/markscribe2/releases)
+[![Build Status](https://github.com/sheerlox/markscribe2/workflows/build/badge.svg)](https://github.com/sheerlox/markscribe2/actions)
+[![Go ReportCard](https://goreportcard.com/badge/sheerlox/markscribe2)](https://goreportcard.com/report/sheerlox/markscribe2)
+[![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://pkg.go.dev/github.com/sheerlox/markscribe2)
 
 Your personal markdown scribe with template-engine and Git(Hub) & RSS powers 📜
 
-You can run markscribe as a GitHub Action: [readme-scribe](https://github.com/muesli/readme-scribe/)
+You can run markscribe2 as a GitHub Action: [readme-scribe2](https://github.com/sheerlox/readme-scribe2/)
 
 ## Usage
 
 Render a template to stdout:
 
-    markscribe template.tpl
+    markscribe2 template.tpl
 
 Render to a file:
 
-    markscribe -write /tmp/output.md template.tpl
+    markscribe2 -write /tmp/output.md template.tpl
 
 ## Installation
 
 ### Packages & Binaries
 
-If you use Brew, you can simply install the package:
-
-    brew install muesli/tap/markscribe
-
-Or download a binary from the [releases](https://github.com/muesli/markscribe/releases)
+Download a binary from the [releases](https://github.com/sheerlox/markscribe2/releases)
 page. Linux (including ARM) binaries are available, as well as Debian and RPM
 packages.
 
 ### Build From Source
 
-Alternatively you can also build `markscribe` from source. Make sure you have a
+Alternatively you can also build `markscribe2` from source. Make sure you have a
 working Go environment (Go 1.16 or higher is required). See the
 [install instructions](https://golang.org/doc/install.html).
 
-To install markscribe, simply run:
+To install markscribe2, simply run:
 
-    go get github.com/muesli/markscribe
+    go get github.com/sheerlox/markscribe2
 
 ## Templates
 
@@ -47,7 +43,7 @@ You can find an example template to generate a GitHub profile README under
 [`templates/github-profile.tpl`](templates/github-profile.tpl). Make sure to fill in (or remove) placeholders,
 like the RSS-feed or social media URLs.
 
-Rendered it looks a little like my own profile page: https://github.com/muesli
+Rendered it looks a little like my own profile page: https://github.com/sheerlox
 
 ## Functions
 
@@ -123,7 +119,7 @@ This function requires GitHub authentication with the following API scopes:
 ### Custom GitHub repository
 
 ```
-{{with repo "muesli" "markscribe"}}
+{{with repo "sheerlox" "markscribe2"}}
 Name: {{.Name}}
 Description: {{.Description}}
 URL: {{.URL}}
@@ -241,12 +237,12 @@ This function requires a `LITERAL_EMAIL` and `LITERAL_PASSWORD`.
 
 ## Template Engine
 
-markscribe uses Go's powerful template engine. You can find its documentation
+markscribe2 uses Go's powerful template engine. You can find its documentation
 here: https://golang.org/pkg/text/template/
 
 ## Template Helpers
 
-markscribe comes with a few handy template helpers:
+markscribe2 comes with a few handy template helpers:
 
 To format timestamps, call `humanize`:
 
@@ -262,7 +258,7 @@ To reverse the order of a slice, call `reverse`:
 
 ## GitHub Authentication
 
-In order to access some of GitHub's API, markscribe requires you to provide a
+In order to access some of GitHub's API, markscribe2 requires you to provide a
 valid GitHub token in an environment variable called `GITHUB_TOKEN`. You can
 create a new token by going to your profile settings:
 
@@ -270,7 +266,7 @@ create a new token by going to your profile settings:
 
 ## GoodReads API key
 
-In order to access some of GoodReads' API, markscribe requires you to provide a
+In order to access some of GoodReads' API, markscribe2 requires you to provide a
 valid GoodReads key in an environment variable called `GOODREADS_TOKEN`. You can
 create a new token by going [here](https://www.goodreads.com/api/keys).
 Then you need to go to your repository and add it, `Settings -> Secrets -> New secret`.
@@ -279,7 +275,7 @@ You also need to set your GoodReads user ID in your secrets as `GOODREADS_USER_I
 ## FAQ
 
 Q: That's awesome, but can you expose more APIs and data?  
-A: Of course, just open a new issue and let me know what you'd like to do with markscribe!
+A: Of course, just open a new issue and let me know what you'd like to do with markscribe2!
 
 Q: That's awesome, but I don't have my own server to run this on. Can you help?  
-A: Check out [readme-scribe](https://github.com/muesli/readme-scribe/), a GitHub Action that runs markscribe for you!
+A: Check out [readme-scribe2](https://github.com/sheerlox/readme-scribe2/), a GitHub Action that runs markscribe2 for you!
